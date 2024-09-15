@@ -13,4 +13,5 @@ function refresh(){
     var tablenum = document.getElementById('print-num').value = '';
     var minlength = document.getElementById('minlength').value = '';
     var maxlength = document.getElementById('maxlength').value='';
+    document.getElementById('table').innerHTML = ''
 }
