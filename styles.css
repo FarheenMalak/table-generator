@@ -1,105 +1,203 @@
 /* Base Styles */
+
 body, h1, p {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 body {
+
     background: #1b1b1b;
+
     font-family: 'Arial', sans-serif;
+
     height: 100vh;
+
     text-align: center;
+
     margin-top: 5rem;
+
     color: white;
+
 }
+
+
 
 .container {
+
     display: flex;
-    flex-direction: row;  /* Ensure row layout */
-    justify-content: space-between;  /* Space between elements */
+
+    flex-direction: row;
+
     max-width: 90vw;
-    margin: 0 auto;
-    gap: 1rem;  /* Add some space between elements */
+
+   justify-content: center;
+
+   align-items: center;
+
 }
 
-#table {
+#table{
+
     color: white;
+
 }
 
-label {
+label{
+
     margin-left: 2rem;
+
 }
 
-input {
+input{
+
     padding: 0.5rem;
-    font-size: 1rem;
+
 }
 
 button {
+
     background-color: rgb(58, 172, 13);
+
     padding: 1rem;
+
     color: white;
+
     border: none;
-    font-size: 1rem;
+
+    font-size: 1rem; 
+
     cursor: pointer;
+
     transition: 0.3s;
-    border-radius: 10px;
+
+    border-radius: 10px; margin-left: 1rem;
+
 }
+
+
 
 button:hover {
-    background-color: rgb(40, 100, 17);
+
+    background-color: rgb(40, 100, 17); 
+
 }
 
-#refresh {
+#refresh{
+
     background-color: red;
+
 }
 
 #refresh:hover {
-    background-color: rgb(128, 25, 25);
+
+    background-color: rgb(128, 25, 25); 
+
 }
 
-/* For All Screens Except Mobile */
-@media (min-width: 481px) {
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+
     .container {
-        flex-direction: row;  /* Keep elements in a row for larger screens */
-        justify-content: space-evenly;  /* Distribute space between elements evenly */
-        align-items: center;  /* Align items vertically in the center */
-        max-width: 80vw;  /* Adjust width to make it look better on laptops */
+
+        display: flex;
+
+        flex-direction: row;
+
+        max-width: 100vw;
+
+       justify-content: center;
+
     }
 
-    input, button {
-        width: auto;  /* Let inputs and buttons take natural width */
-        padding: 0.75rem 1rem;
-    }
 
-    label {
-        margin-left: 1rem;
-    }
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 480px) {
-    .container {
-        flex-direction: column;  /* Stack items vertically on mobile */
-        align-items: center;
-        width: 100vw;  /* Make the container take full width on mobile */
-        gap: 1rem;  /* Space between elements */
-    }
 
     button {
+
+        padding: 0.75rem;
+
+        font-size: 0.9rem;
+
+    }
+
+    
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        margin-left: 0rem; 
+
+    }
+
+
+
+    button {
+
         display: block;
+
         width: 100%;
+
         margin-top: 1rem;
+
+    } 
+
+    label{
+
+        display:block;
+
     }
 
-    label {
+}
+
+
+
+@media (max-width: 480px) {
+
+    .container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        margin-left: 0rem; 
+
+    }
+
+
+
+    button {
+
         display: block;
-        margin-left: 0;
+
+        width: 100%;
+
+        margin-top: 1rem;
+
     }
 
-    input {
-        width: 100%;  /* Make input take full width */
-        margin-bottom: 1rem;
+    label{
+
+        display:block;
+
     }
+
 }
