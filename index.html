@@ -1,28 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table printer</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-      <div id="inputs">
-        <label for="print-num">Which table you want to print?</label>
-      <input id="print-num" type="number"> 
-      <label for="minlength">Number to start table...</label> 
-      <input type="number" id="minlength">
-      <label for="maxlength">Number to end table</label>
-      <input type="number" id="maxlength">
-      </div>
-       <div>
-        <button onclick="printTable()">Print table</button>
-        <button id="refresh" onclick="refresh()">Refresh</button>
-       </div>
-    </div>
-    <p id="table"></p>
-    <script src="script.js"></script>
-</body>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Table Printer</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1>Table Printer</h1>
+        <div id="inputs"> 
+            <label for="print-num">Which table you want to print?</label> 
+            <input id="print-num" type="number" placeholder="Enter a number">  
+            <label for="minlength">Start from...</label>  
+            <input type="number" id="minlength" placeholder="Start value"> 
+            <label for="maxlength">End at...</label> 
+            <input type="number" id="maxlength" placeholder="End value"> 
+        </div> 
+        <div class="buttons"> 
+            <button onclick="printTable()">Print Table</button> 
+            <button id="refresh" onclick="refresh()">Refresh</button> 
+        </div> 
+    </div> 
+    <p id="table"></p> 
+    <script src="script.js"></script> 
+</body> 
 </html>
-
