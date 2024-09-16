@@ -17,77 +17,109 @@ body {
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     max-width: 90vw;
-   justify-content: center;
+    margin: 0 auto;
 }
-#table{
+
+#table {
     color: white;
 }
-label{
+
+label {
     margin-left: 2rem;
 }
-input{
+
+input {
     padding: 0.5rem;
+    font-size: 1rem; /* Ensure input is scalable */
 }
+
 button {
     background-color: rgb(58, 172, 13);
     padding: 1rem;
     color: white;
     border: none;
-    font-size: 1rem; 
+    font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 10px; margin-left: 1rem;
+    border-radius: 10px;
+    margin-left: 1rem;
 }
 
 button:hover {
-    background-color: rgb(40, 100, 17); 
-}
-#refresh{
-    background-color: red;
-}
-#refresh:hover {
-    background-color: rgb(128, 25, 25); 
+    background-color: rgb(40, 100, 17);
 }
 
-/* Responsive Design */
+#refresh {
+    background-color: red;
+}
+
+#refresh:hover {
+    background-color: rgb(128, 25, 25);
+}
+
+/* Responsive Design for Laptops */
+@media (max-width: 1440px) {
+    body {
+        margin-top: 2rem; /* Reduce top margin for large screens */
+    }
+
+    .container {
+        max-width: 80vw;
+    }
+
+    input, button {
+        font-size: 1.1rem; /* Slightly increase font size */
+    }
+}
+
+/* Responsive Design for Medium Screens */
 @media (max-width: 1024px) {
     .container {
-        display: flex;
+        max-width: 85vw;
         flex-direction: row;
-        max-width: 90vw;
-       justify-content: center;
+        justify-content: center;
     }
 
     button {
         padding: 0.75rem;
         font-size: 0.9rem;
     }
-    
 }
 
+/* Responsive Design for Tablets */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         align-items: center;
-        margin-left: 0rem; 
+        max-width: 100vw;
+        padding: 1rem; /* Add padding for better spacing */
     }
 
     button {
         display: block;
         width: 100%;
         margin-top: 1rem;
-    } 
-    label{
-        display:block;
+    }
+
+    label {
+        display: block;
+        margin-left: 0; /* Reset margin */
+    }
+
+    input {
+        width: 100%; /* Make input take full width */
+        margin-bottom: 1rem; /* Add space between inputs */
     }
 }
 
+/* Responsive Design for Mobile */
 @media (max-width: 480px) {
     .container {
         flex-direction: column;
         align-items: center;
-        margin-left: 0rem; 
+        padding: 1rem; /* Ensure padding on smaller devices */
     }
 
     button {
@@ -95,7 +127,14 @@ button:hover {
         width: 100%;
         margin-top: 1rem;
     }
-    label{
-        display:block;
+
+    label {
+        display: block;
+        margin-left: 0;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }
